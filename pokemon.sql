@@ -54,5 +54,4 @@ INSERT INTO nature VALUES(25,"timide","base_atk","base_def");
 LOAD DATA LOCAL INFILE "poke.txt"
 INTO TABLE pokemon.pokemon
 FIELDS TERMINATED BY ' /'
-ENCLOSED BY '"'
 IGNORE 1 LINES;
