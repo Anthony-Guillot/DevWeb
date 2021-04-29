@@ -22,55 +22,6 @@
     }
     $requete=$base->prepare('select * from pokemon');
     $requete->execute();
-    echo '<style>
-    #home{
-      text-align:center;
-    }
-    @font-face{
-      font-family:pixel;
-      src:url("upheavtt.ttf");    
-    }
-    @font-face{
-      font-family:pokemon;
-      src:url("Ketchum.otf");    
-    }
-    #recherche{
-      text-align: center;
-    }
-    .lignehaut{
-      background-color: #e5324d;
-      font-size:x-large;
-      text-decoration:underline;
-      color:#fff;
-    }
-    #pokedex{
-      text-align:center;
-      font-family:pokemon;
-      font-size:500%;
-    }
-    table{
-      width:75%;
-      height:75%;
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:20px;
-      border-radius:10px;
-      border-spacing:6px;
-      background-color:#e5324d;
-    }
-    td,tr{
-      font-family:pixel;
-      font-size:large;
-      text-align:center;
-      border:solid 1px;
-      background-color: #eee;
-  }
-
-  body{
-      background-color: #ccc;
-      background-size:contain;
-      background-image:url("https://img.freepik.com/vecteurs-libre/abstrait-bleu-formes-geometriques_1035-17545.jpg?size=626&ext=jpg");
-  }</style>';
     echo '<table>';
     echo '<tr><td class="lignehaut">Image</td><td class="lignehaut">Id</id><td class="lignehaut">Nom</td><td class="lignehaut">PV</td><td class="lignehaut">Attaque</td><td class="lignehaut">Defense</td><td class="lignehaut">Attaque Speciale</td><td class="lignehaut">Defense Speciale</td><td class="lignehaut">Vitesse</td></tr>';
     while($donne=$requete->fetch()){

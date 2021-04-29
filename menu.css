@@ -1,5 +1,18 @@
+@font-face{
+    font-family:retro;
+    src:url("PressStart2P.ttf");    
+}
+@font-face{
+    font-family:pokemon;
+    src:url("Ketchum.otf");    
+}
+body{
+    font-family: retro;
+}
 h1{
     text-align: center;
+    font-family: pokemon;
+    font-size: 400%;
 }
 
 table{
