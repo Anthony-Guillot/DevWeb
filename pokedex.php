@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Premier programme PHP !</title>
-    <link rel="stylesheet" href="pokemon.css">
+    <link rel="stylesheet" href="pokedex.css">
   </head>
   <body>
     <?php 
@@ -16,31 +16,50 @@
     $requete->execute();
     echo '<h1 id="pokedex">Pokedex</h1>';
     echo '<style>
+    @font-face{
+      font-family:pixel;
+      src:url("upheavtt.ttf");    
+    }
+    @font-face{
+      font-family:pokemon;
+      src:url("Ketchum.otf");    
+    }
+    .lignehaut{
+      background-color: #e5324d;
+      font-size:x-large;
+      text-decoration:underline;
+      color:#fff;
+    }
     #pokedex{
-      width:fit-content;
-      color: black;
       text-align:center;
-      text-shadow: 4px 4px #444;
+      font-family:pokemon;
+      font-size:500%;
     }
     table{
+      width:75%;
+      height:75%;
       margin-left:auto;
       margin-right:auto;
       margin-top:20px;
-      box-shadow: 15px 7px black;
+      border-radius:10px;
+      border-spacing:6px;
+      background-color:#e5324d;
     }
-    table,td,tr{
+    td,tr{
+      font-family:pixel;
+      font-size:large;
       text-align:center;
       border:solid 1px;
-      background-color: red;
-  }
-  tr:nth-child(2n) td{
       background-color: #eee;
   }
+
   body{
-      background-color: #eee;
+      background-color: #ccc;
+      background-size:contain;
+      background-image:url("https://img.freepik.com/vecteurs-libre/abstrait-bleu-formes-geometriques_1035-17545.jpg?size=626&ext=jpg");
   }</style>';
     echo '<table>';
-    echo '<tr><td></td><td>Id</id><td>Nom</td><td>PV</td><td>Attaque</td><td>Defense</td><td>Attaque Speciale</td><td>Defense Speciale</td><td>Vitesse</td></tr>';
+    echo '<tr><td class="lignehaut">Image</td><td class="lignehaut">Id</id><td class="lignehaut">Nom</td><td class="lignehaut">PV</td><td class="lignehaut">Attaque</td><td class="lignehaut">Defense</td><td class="lignehaut">Attaque Speciale</td><td class="lignehaut">Defense Speciale</td><td class="lignehaut">Vitesse</td></tr>';
     while($donne=$requete->fetch()){
       echo '<tr><td><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
     }
