@@ -3,11 +3,11 @@
   }
   @font-face{
     font-family:pixel;
-    src:url("upheavtt.ttf");    
+    src:url("fonts/upheavtt.ttf");    
   }
   @font-face{
     font-family:pokemon;
-    src:url("Ketchum.otf");    
+    src:url("fonts/Ketchum.otf");    
   }
   #recherche{
     text-align: center;
