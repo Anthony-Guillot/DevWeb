@@ -6,7 +6,7 @@
   </head>
   <body>
     <div  id="home">
-      <a href="projet.html"><input type="button" value="Menu Principale"></a>
+      <a href="menu.html"><input type="button" value="Menu Principale"></a>
     </div>
     <h1 id="pokedex">Pokedex</h1>
     <div id="recherche">
