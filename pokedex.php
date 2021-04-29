@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="pokedex.css">
   </head>
   <body>
+    <h1 id="pokedex">Pokedex</h1>
+    <div id="recherche">
+      <h3 > Recherche d'un pokemon</h3>
+      <input type="text"><input type="button" value="rechercher" onclick="">
+    </div>
     <?php 
     try{
       $base = new PDO('mysql:host=localhost;dbname=pokemon','guillot','010828');
@@ -14,7 +19,6 @@
     }
     $requete=$base->prepare('select * from pokemon');
     $requete->execute();
-    echo '<h1 id="pokedex">Pokedex</h1>';
     echo '<style>
     @font-face{
       font-family:pixel;
@@ -23,6 +27,9 @@
     @font-face{
       font-family:pokemon;
       src:url("Ketchum.otf");    
+    }
+    #recherche{
+      text-align: center;
     }
     .lignehaut{
       background-color: #e5324d;

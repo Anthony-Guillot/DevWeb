@@ -41,8 +41,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -159,6 +158,13 @@
                                 {
                                     "id": "workbench.action.selectProductIconTheme",
                                     "label": "&&Product Icon Theme"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.userDataSync.actions.turnOn",
+                                    "label": "Turn on Settings Sync..."
                                 }
                             ]
                         }
@@ -540,8 +546,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "Toggle &&Word Wrap",
-                        "enabled": false
+                        "label": "Toggle &&Word Wrap"
                     },
                     {
                         "id": "editor.action.toggleMinimap",
@@ -568,8 +573,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -578,8 +582,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
