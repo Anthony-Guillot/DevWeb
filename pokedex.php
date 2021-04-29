@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="pokedex.css">
   </head>
   <body>
+    <div  id="home">
+      <a href="projet.html"><input type="button" value="Menu Principale"></a>
+    </div>
     <h1 id="pokedex">Pokedex</h1>
     <div id="recherche">
       <h3 > Recherche d'un pokemon</h3>
@@ -20,6 +23,9 @@
     $requete=$base->prepare('select * from pokemon');
     $requete->execute();
     echo '<style>
+    #home{
+      text-align:center;
+    }
     @font-face{
       font-family:pixel;
       src:url("upheavtt.ttf");    

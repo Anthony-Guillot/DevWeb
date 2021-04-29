@@ -3,7 +3,7 @@ h1{
 }
 
 table{
-    height: 400px;
+    height: 75px;
     width: 800px;
     border:solid 2px black;
     border-radius: 8px;
@@ -15,4 +15,14 @@ td,tr{
     text-align:center;
     border:solid 1px;
     background-color: #eee;
+}
+a:hover{
+    color:crimson;
+}
+#sommaire{
+    width:50%;
+    margin: auto;
+    margin-top: 1%;
+    border:solid 2px;
+    border-radius: 6px;
 }
