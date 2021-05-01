@@ -15,11 +15,15 @@ a{
 }
 body{
     font-family: retro;
+    background-size:cover;
+    background-image: linear-gradient(to right,#0f380f, #9bbc0f);
 }
 h1{
+    color:#0f380f;
+    -webkit-text-stroke: 2px white;
     text-align: center;
     font-family: pokemon;
-    font-size: 400%;
+    font-size: 600%;
 }
 
 table{
@@ -34,7 +38,7 @@ td,tr{
     font-size:large;
     text-align:center;
     border:solid 1px;
-    background-color: #eee;
+    background-color: #8bac0f ;
 }
 a:hover{
     color:crimson;
