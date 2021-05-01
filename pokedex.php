@@ -5,29 +5,59 @@
     <link rel="stylesheet" href="pokedex.css">
   </head>
   <body>
-    <div  id="home">
-      <a href="menu.html"><input type="button" value="Menu Principale"></a>
-    </div>
-    <h1 id="pokedex">Pokedex</h1>
-    <div id="recherche">
-      <h3 > Recherche d'un pokemon</h3>
-      <input type="text"><input type="button" value="rechercher" onclick="">
-    </div>
-    <?php 
+  <h1>
+        Pokalculator
+        </h1>
+        <table>
+            <tr>
+                <td>
+                    <a href="menu.html">Acceuil</a>
+                </td>
+                <td>
+                    <a href="pokedex.php">Pokedex</a>
+                </td>
+                <td>
+                    <a href="optimisateur.html">Optimisateur d'EV</a>
+                </td>
+                <td>
+                    <a href="explication.html">Explication</a>
+                </td>
+                <td>
+                    <a href="compte.php">Mon compte pokemon</a>
+                </td>
+            </tr>
+        </table>
+        <div id="recherche">
+          <form method="GET">
+            <label id="recherche-label">Recherche : <input id="recherche-texte" type="search" name="search"><input id="recherche-button" type="submit" value="rechercher"></label>
+          </form>
+        </div>
+    <?php
     try{
       $base = new PDO('mysql:host=localhost;dbname=pokemon','guillot','010828');
     }
     catch(PDOException $e){
       echo $e->getMessage();
     }
-    $requete=$base->prepare('select * from pokemon');
-    $requete->execute();
-    echo '<table>';
+    $requete=$base->query('select * from pokemon');
+    echo '<table id="l_pokedex">';
     echo '<tr><td class="lignehaut">Image</td><td class="lignehaut">Id</id><td class="lignehaut">Nom</td><td class="lignehaut">PV</td><td class="lignehaut">Attaque</td><td class="lignehaut">Defense</td><td class="lignehaut">Attaque Speciale</td><td class="lignehaut">Defense Speciale</td><td class="lignehaut">Vitesse</td></tr>';
-    while($donne=$requete->fetch()){
-      echo '<tr><td><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
+    if(isset($_GET['search']) AND !empty($_GET['search']))
+    {
+      $search = ($_GET['search']);
+      $pokemon=$base->query('select * from pokemon where nom like "%'.$search.'%"');
+      if($pokemon->rowCount() > 0){
+        while($donne=$pokemon->fetch()){
+          echo '<tr><td  id="image"><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
+        }
+      }
     }
-    echo '</table>'
+    else{
+      while($donne=$requete->fetch()){
+        echo '<tr><td  id="image"><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
+      }
+    }
+    echo '</table>';
     ?>
   </body>
 </html>

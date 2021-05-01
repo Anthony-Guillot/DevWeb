@@ -1,5 +1,29 @@
+@font-face{
+    font-family:retro;
+    src:url("fonts/PressStart2P.ttf");    
+}
+@font-face{
+    font-family:pokemon;
+    src:url("fonts/Ketchum.otf");    
+}
+@font-face{
+    font-family:tableau;
+    src:url("fonts/upheavtt.ttf");    
+}
+a{
+    font-family: tableau;
+}
+body{
+    font-family: retro;
+    background-size:cover;
+    background-image: linear-gradient(to right,#0f380f, #9bbc0f);
+}
 h1{
+    color:#0f380f;
+    -webkit-text-stroke: 2px white;
     text-align: center;
+    font-family: pokemon;
+    font-size: 600%;
 }
 
 table{
@@ -9,20 +33,16 @@ table{
     border-radius: 8px;
     margin: auto;
 }
-
 td,tr{
     font-family:pixel;
     font-size:large;
     text-align:center;
     border:solid 1px;
-    background-color: #eee;
+    background-color: #8bac0f ;
 }
-
-h3{
-    text-align: center;
-
+a:hover{
+    color:crimson;
 }
-
 #exp{
     padding-left: 20px;
     padding-right: 20px;
@@ -34,4 +54,6 @@ h3{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2em;
+    background-color:#9bbc0f;
+    color: #0f380f;
 }

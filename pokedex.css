@@ -1,48 +1,91 @@
-#home{
-    text-align:center;
-  }
-  @font-face{
-    font-family:pixel;
-    src:url("fonts/upheavtt.ttf");    
-  }
-  @font-face{
-    font-family:pokemon;
-    src:url("fonts/Ketchum.otf");    
-  }
-  #recherche{
-    text-align: center;
-  }
-  .lignehaut{
-    background-color: #e5324d;
-    font-size:x-large;
-    text-decoration:underline;
-    color:#fff;
-  }
-  #pokedex{
-    text-align:center;
-    font-family:pokemon;
-    font-size:500%;
-  }
-  table{
-    width:75%;
-    height:75%;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:20px;
-    border-radius:10px;
-    border-spacing:6px;
-    background-color:#e5324d;
-  }
-  td,tr{
-    font-family:pixel;
-    font-size:large;
-    text-align:center;
-    border:solid 1px;
-    background-color: #eee;
+@font-face{
+  font-family:retro;
+  src:url("fonts/PressStart2P.ttf");    
+}
+@font-face{
+  font-family:pokemon;
+  src:url("fonts/Ketchum.otf");    
+}
+@font-face{
+  font-family:tableau;
+  src:url("fonts/upheavtt.ttf");    
+}
+a{
+  font-family: tableau;
+}
+body{
+  font-family: retro;
+  background-size:cover;
+  background-image: linear-gradient(to right,#0f380f, #9bbc0f);
+}
+h1{
+  color:#0f380f;
+  -webkit-text-stroke: 2px white;
+  text-align: center;
+  font-family: pokemon;
+  font-size: 600%;
 }
 
-body{
-    background-color: #ccc;
-    background-size:contain;
-    background-image:url("https://img.freepik.com/vecteurs-libre/abstrait-bleu-formes-geometriques_1035-17545.jpg?size=626&ext=jpg");
+table{
+  height: 75px;
+  width: 800px;
+  border:solid 2px black;
+  border-radius: 8px;
+  margin: auto;
+}
+td,tr{
+  font-family:pixel;
+  font-size:large;
+  text-align:center;
+  border:solid 1px;
+  background-color: #8bac0f ;
+}
+a:hover{
+  color:crimson;
+}
+#l_pokedex td,tr{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: retro;
+  padding-left: 20px;
+  padding-right: 20px;
+  border:solid 2px black;
+  border-radius: 8px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
+  background-color:#9bbc0f;
+  color: #0f380f;
+}
+#image{
+  background-color: beige;
+}
+#recherche{
+  text-align: center;
+  display: table;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 2em;
+  border:solid 2px black;
+  border-radius: 6px;
+  font-family: retro;
+  background-color: #9bbc0f;
+  color:#0f380f;
+}
+
+#recherche-texte{
+  border:solid 2px black;
+  border-radius: 6px;
+  font-family: retro;
+  background-color: #9bbc0f;
+  color:#0f380f;
+}
+#recherche-button{
+  font-family: retro;
+  background-color: #9bbc0f;
+  color:#0f380f;
 }
