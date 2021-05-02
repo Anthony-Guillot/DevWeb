@@ -42,9 +42,9 @@
     $requete=$base->query('select * from pokemon');
     echo '<table id="l_pokedex">';
     echo '<tr><td class="lignehaut">Image</td><td class="lignehaut">Id</id><td class="lignehaut">Nom</td><td class="lignehaut">PV</td><td class="lignehaut">Attaque</td><td class="lignehaut">Defense</td><td class="lignehaut">Attaque Speciale</td><td class="lignehaut">Defense Speciale</td><td class="lignehaut">Vitesse</td></tr>';
-    if(isset($_GET['search']) AND !empty($_GET['search']))
+    if(!empty($_GET['search']))
     {
-      $search = ($_GET['search']);
+      $search = ($GET['search']);
       $pokemon=$base->query('select * from pokemon where nom like "%'.$search.'%"');
       if($pokemon->rowCount() > 0){
         while($donne=$pokemon->fetch()){
