@@ -6,17 +6,47 @@
         <link rel="stylesheet" href="compte.css">
     </head>
     <body>
+        <h1>
+        Pokalculator
+        </h1>
+        <table>
+            <tr class="liste">
+                <td class="liste">
+                    <a href="menu.html">Acceuil</a>
+                </td>
+                <td class="liste">
+                    <a href="pokedex.php">Pokedex</a>
+                </td>
+                <td class="liste">
+                    <a href="optimisateur.php">Optimisateur d'EV</a>
+                </td>
+                <td class="liste">
+                    <a href="explication.html">Explication</a>
+                </td>
+                <td class="liste">
+                    <a href="compte.php">Mon compte pokemon</a>
+                </td>
+            </tr>
+        </table>
         <form action="" id="inscription" method="POST">
             <h1>Inscription</h1>
-            <label>Email :<input type="email" name="mail" placeholder="******@***.**"></label>
+            <label class="label">Email :<input class="text" type="email" name="mail" placeholder="******@***.**"></label>
             <br>
-            <label>Nom :<input type="text" name="pseudo" placeholder="Nom"></label>
+            <label class="label">Nom :<input class="text" type="text" name="pseudo" placeholder="Nom"></label>
             <br>
-            <label>Mot de passe :<input type="password" name="mdp1" ></label>
+            <label class="label">Mot de passe :<input class="text" type="password" name="mdp1" ></label>
             <br>
-            <label>Valider le mot de passe :<input type="password" name="mdp2"></label>
+            <label class="label">Valider le mot de passe :<input class="text" type="password" name="mdp2"></label>
             <br>
-            <input type="submit" value="Inscription" name="inscription" >
+            <input id="bouton" type="submit" value="Inscription" name="inscription" >
+        </form>
+        <form action="" id="connexion" method="POST">
+            <h1>Connexion</h1>
+            <label class="label">Email :<input class="text" type="email" name="mail" placeholder="******@***.**"></label>
+            <br>
+            <label class="label">Mot de passe :<input class="text" type="password" name="mdp1" ></label>
+            <br>
+            <input id="bouton" type="submit" value="Connexion" name="connexion" >
         </form>
         <?php 
             try{
@@ -34,14 +64,14 @@
                     if($mdp1==$mdp2){
                         $requete=$base->prepare("INSERT INTO user (nom,mail,mdp) VALUES (?,?,?)");
                         $requete->execute(array($pseudo,$mail,$mdp1));
+                        header("location: http://localhost/DevWeb/Inscris.html");
                     }
                     else{
-                        alert("les mots de passes ne correspondent pas");
-                        header("location: http://localhost/DevWeb/menu.html");
+                        echo "<script>alert('les mots de passes ne correspondent pas')</script>";
                     }
                 }
                 else{
-                        alert("Merci de remplir toutes les cases");
+                    echo "<script>alert('Merci de remplir toutes les cases')</script>";
                 }
 
             }

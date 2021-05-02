@@ -1,16 +1,16 @@
 @font-face{
     font-family:retro;
     src:url("fonts/PressStart2P.ttf");    
-}
-@font-face{
+  }
+  @font-face{
     font-family:pokemon;
     src:url("fonts/Ketchum.otf");    
-}
-@font-face{
+  }
+  @font-face{
     font-family:tableau;
     src:url("fonts/upheavtt.ttf");    
-}
-a{
+  }
+  a{
     font-family: tableau;
   }
   body{
@@ -49,19 +49,17 @@ a{
   a:hover{
     color:crimson;
   }
-#exp{
-    font-size: 1vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-  font-family: retro;
-  border:solid 2px black;
-  border-radius: 8px;
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 2em;
-  background-color:#9bbc0f;
-  color: #0f380f;
+  #bravo{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:solid 2px black;
+    border-radius: 8px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2em;
+    background-color:#9bbc0f;
+    color: #0f380f;
 }
