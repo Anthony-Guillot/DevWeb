@@ -14,7 +14,13 @@
 }
 
 a {
+  color : black;
+  text-decoration: none;
   font-family: tableau;
+}
+
+a:hover {
+  color: crimson;
 }
 
 body {
@@ -55,60 +61,19 @@ td, tr {
   background-color: #8bac0f;
 }
 
-a:hover {
-  color: crimson;
-}
-
-#inscription {
-  float: left;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
+#sommaire {
+  font-size: 1vw;
+  padding-left: 1.5vw;
+  padding-right: 1vw;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
+  font-family: retro;
   border: solid 2px black;
   border-radius: 8px;
   text-align: justify;
-  margin-left: 5%;
-  margin-top: 2vw;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
   background-color: #9bbc0f;
   color: #0f380f;
-}
-
-#connexion {
-  float: right;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-  border: solid 2px black;
-  border-radius: 8px;
-  text-align: justify;
-  margin-right: 5%;
-  margin-top: 2vw;
-  background-color: #9bbc0f;
-  color: #0f380f;
-}
-
-.text {
-  font-size:1vw;
-  border: solid 2px black;
-  border-radius: 6px;
-  font-family: retro;
-  background-color: #9bbc0f;
-  color: #0f380f;
-}
-.label{
-  font-size: 1vw;
-}
-
-#bouton {
-  font-size: 1vw;
-  margin: 0.5vw;
-  font-family: retro;
-  background-color: #9bbc0f;
-  color: #0f380f;
-}
-
-#bouton:hover {
-  background-color: #306230;
 }
