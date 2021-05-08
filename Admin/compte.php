@@ -30,21 +30,21 @@
         </table>
         <form action="" id="inscription" method="POST">
             <h1>Inscription</h1>
-            <label class="label">Email :<input class="text" type="email" name="mail" placeholder="******@***.**"></label>
+            <label class="label">Email :<br><input class="text" type="email" name="mail" placeholder="******@***.**"></label>
             <br>
-            <label class="label">Nom :<input class="text" type="text" name="pseudo" placeholder="Nom"></label>
+            <label class="label">Nom :<br><input class="text" type="text" name="pseudo" placeholder="Nom"></label>
             <br>
-            <label class="label">Mot de passe :<input class="text" type="password" name="mdp1" ></label>
+            <label class="label">Mot de passe :<br><input class="text" type="password" name="mdp1" ></label>
             <br>
-            <label class="label">Valider le mot de passe :<input class="text" type="password" name="mdp2"></label>
+            <label class="label">Valider le mot de passe :<br><input class="text" type="password" name="mdp2"></label>
             <br>
             <input id="bouton" type="submit" value="Inscription" name="inscription" >
         </form>
         <form action="" id="connexion" method="POST">
             <h1>Connexion</h1>
-            <label class="label">Email :<input class="text" type="email" name="mail" placeholder="******@***.**"></label>
+            <label class="label">Email :<br><input class="text" type="email" name="mail" placeholder="******@***.**"></label>
             <br>
-            <label class="label">Mot de passe :<input class="text" type="password" name="mdp1" ></label>
+            <label class="label">Mot de passe :<br><input class="text" type="password" name="mdp1" ></label>
             <br>
             <input id="bouton" type="submit" value="Connexion" name="connexion" >
         </form>
