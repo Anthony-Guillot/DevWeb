@@ -14,7 +14,13 @@
 }
 
 a {
+  color : black;
+  text-decoration: none;
   font-family: tableau;
+}
+
+a:hover {
+  color: #0f380f;
 }
 
 body {
@@ -55,9 +61,6 @@ td, tr {
   background-color: #8bac0f;
 }
 
-a:hover {
-  color: crimson;
-}
 
 img {
   max-width: 100%;

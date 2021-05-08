@@ -14,7 +14,13 @@
 }
 
 a {
+  color : black;
+  text-decoration: none;
   font-family: tableau;
+}
+
+a:hover {
+  color: #0f380f;
 }
 
 body {
@@ -53,10 +59,6 @@ td, tr {
   text-align: center;
   border: solid 1px;
   background-color: #8bac0f;
-}
-
-a:hover {
-  color: crimson;
 }
 
 #l_pokedex td, tr {
