@@ -28,7 +28,7 @@
                 </td>
             </tr>
         </table>
-        <form action="" id="idisnc" method="POST">
+        <form action="" id="idinsc" method="POST">
             <h1>Inscription</h1>
             <label class="label">Email :<br><input class="text" type="email" name="mail" placeholder="******@***.**"></label>
             <br>
@@ -38,15 +38,15 @@
             <br>
             <label class="label">Valider le mot de passe :<br><input class="text" type="password" name="mdp2"></label>
             <br>
-            <input id="bouton" type="submit" value="Inscription" name="inscription" >
+            <input id="bouton" type="submit" value="Inscription" name="subinscription" >
         </form>
         <form action="" id="idco" method="POST">
             <h1>Connexion</h1>
             <label class="label">Email :<br><input class="text" type="email" name="logmail" placeholder="******@***.**"></label>
             <br>
-            <label class="label">Mot de passe :<br><input class="text" type="password" name="logmdp" ></label>
+            <label class="label">de passe :<br><input class="text" type="password" name="logmdp" ></label>
             <br>
-            <input id="bouton" type="submit" value="Connexion" name="connexion" >
+            <input id="bouton" type="submit" value="Connexion" name="subconnexion" >
         </form>
         <?php 
             try{
@@ -55,7 +55,7 @@
             catch(PDOException $e){
                 echo $e->getMessage();
             }
-            if(isset($_POST['inscription'])){
+            if($_POST['subinscription']){
                 if(!empty($_POST['mail']) && !empty($_POST['pseudo']) && !empty($_POST['mdp1']) && !empty($_POST['mdp2'])){
                     $mail=htmlspecialchars($_POST['mail']);
                     $pseudo=htmlspecialchars($_POST['pseudo']);
@@ -75,23 +75,27 @@
                 }
 
             }
-            if(isset($_POST['connexion'])){
-                    $mail=htmlspecialchars($_POST['logmail']);
-                    $mdp=sha1($_POST['logmdp']);
-                    $verif->query('select * from user where mail LIKE '.$mail.'');
-                    if($verif->rowCount()!=1){
-                        echo "<script>alert('Pas de compte trouvé')</script>";
-                    }
-                    else{
-                        $donne=$verif->fetch();
-                        if($mdp = $donne['mdp']){
-                            echo "<script>alert('Bonne connexion')</script>";
+            else if($_POST['subconnexion']){
+                if(!empty($_POST['logmail']) && !empty($_POST['logmdp'])){
+                    $logmail=htmlspecialchars($_POST['logmail']);
+                    $logmdp=sha1($_POST['logmdp']);
+                    $user=$base->query('select * from user where mail like "'.$logmail.'"');
+                    if($user->rowCount()==1){
+                        $donne=$user->fetch();
+                        if($logmdp == $donne['mdp']){
+                            header("location: http://l  ocalhost/DevWeb/Client/menu.html");
                         }
                         else{
-                            echo "<script>alert('Mot de passe incorrect')</script>";
+                            echo "<script>alert('Erreur mot de passe')</script>";
                         }
                     }
-
+                    else{
+                        echo "<script>alert('Erreur authentification')</script>";
+                    }
+                }
+                else{
+                    echo "<script>alert('Merci de remplir toutes les cases')</script>";
+                }
             }
             ?>
     </body>

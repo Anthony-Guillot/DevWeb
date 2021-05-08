@@ -1,27 +1,25 @@
 @font-face {
   font-family: retro;
-  src: url("fonts/PressStart2P.ttf");
+  src: url("../fonts/PressStart2P.ttf");
 }
 
 @font-face {
   font-family: pokemon;
-  src: url("fonts/Ketchum.otf");
+  src: url("../fonts/Ketchum.otf");
 }
 
 @font-face {
   font-family: tableau;
-  src: url("fonts/upheavtt.ttf");
+  src: url("../fonts/upheavtt.ttf");
 }
 
 a {
-  color : black;
+  color: black;
   text-decoration: none;
   font-family: tableau;
 }
 
 a:hover {
-  color : black;
-  text-decoration: none;
   color: #0f380f;
 }
 
@@ -63,39 +61,18 @@ td, tr {
   background-color: #8bac0f;
 }
 
-#idinsc {
-  float: left;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-  border: solid 2px black;
-  border-radius: 8px;
-  text-align: justify;
-  margin-left: 10%;
-  margin-top: 2vw;
-  background-color: #9bbc0f;
-  color: #0f380f;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-#idco {
-  float: right;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-  border: solid 2px black;
-  border-radius: 8px;
-  text-align: justify;
-  margin-right: 10%;
-  margin-top: 2vw;
-  background-color: #9bbc0f;
-  color: #0f380f;
-}
-
-.text {
-  width: 90%;
-  font-size: 1vw;
+#recherche {
+  text-align: center;
+  display: table;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  height: 2vw;
   border: solid 2px black;
   border-radius: 6px;
   font-family: retro;
@@ -103,16 +80,28 @@ td, tr {
   color: #0f380f;
 }
 
-.label {
+#l_pokedex td, tr {
   font-size: 1vw;
-  margin: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-family: retro;
+  border: solid 2px black;
+  border-radius: 8px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
+  background-color: #9bbc0f;
+  color: #0f380f;
 }
 
-#texte {
-  margin: 0.5vw;
+.select {
   font-size: 1vw;
-  border: solid 2px black;
-  border-radius: 6px;
+  margin: 0.5vw;
+  border: solid 0.2vw black;
+  border-radius: 0.6vw;
   font-family: retro;
   background-color: #9bbc0f;
   color: #0f380f;

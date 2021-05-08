@@ -1,0 +1,10 @@
+table,td,tr{
+    border:solid 1px;
+    background-color: #bbb;
+}
+tr:nth-child(2n) td{
+    background-color: #eee;
+}
+body{
+    background-color: #111;
+}
