@@ -1,16 +1,16 @@
 @font-face {
   font-family: retro;
-  src: url("fonts/PressStart2P.ttf");
+  src: url("../fonts/PressStart2P.ttf");
 }
 
 @font-face {
   font-family: pokemon;
-  src: url("fonts/Ketchum.otf");
+  src: url("../fonts/Ketchum.otf");
 }
 
 @font-face {
   font-family: tableau;
-  src: url("fonts/upheavtt.ttf");
+  src: url("../fonts/upheavtt.ttf");
 }
 
 a {
