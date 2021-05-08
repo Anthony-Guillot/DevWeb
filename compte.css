@@ -17,6 +17,10 @@ a {
   font-family: tableau;
 }
 
+a:hover {
+  color: crimson;
+}
+
 body {
   font-family: retro;
   background-image: linear-gradient(to right, #0f380f, #9bbc0f);
@@ -53,10 +57,6 @@ td, tr {
   text-align: center;
   border: solid 1px;
   background-color: #8bac0f;
-}
-
-a:hover {
-  color: crimson;
 }
 
 #inscription {
@@ -99,6 +99,17 @@ a:hover {
 }
 .label{
   font-size: 1vw;
+  margin: 0.5vw;
+}
+
+#texte {
+  margin: 0.5vw;
+  font-size: 1vw;
+  border: solid 2px black;
+  border-radius: 6px;
+  font-family: retro;
+  background-color: #9bbc0f;
+  color: #0f380f;
 }
 
 #bouton {
