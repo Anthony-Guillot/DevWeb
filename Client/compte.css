@@ -105,7 +105,7 @@ td, tr {
   font-size: 1vw;
 }
 
-#bouton {
+#deconnection {
   font-size: 1vw;
   margin: 0.5vw;
   font-family: retro;
@@ -113,6 +113,6 @@ td, tr {
   color: #0f380f;
 }
 
-#bouton:hover {
+#deconnection:hover {
   background-color: #306230;
 }

@@ -29,7 +29,7 @@
             </tr>
         </table>
         <form action="" id="inscription" method="POST">
-            <h1>Vous êtes connecté sous </h1>
+            <input id="deconnection" type="submit" value="Deconnection" name="deco">
         </form>
         <?php 
             try{
@@ -38,25 +38,9 @@
             catch(PDOException $e){
                 echo $e->getMessage();
             }
-            if(isset($_POST['inscription'])){
-                if(!empty($_POST['mail']) && !empty($_POST['pseudo']) && !empty($_POST['mdp1']) && !empty($_POST['mdp2'])){
-                    $mail=htmlspecialchars($_POST['mail']);
-                    $pseudo=htmlspecialchars($_POST['pseudo']);
-                    $mdp1=sha1($_POST['mdp1']);
-                    $mdp2=sha1($_POST['mdp2']);
-                    if($mdp1==$mdp2){
-                        $requete=$base->prepare("INSERT INTO user (nom,mail,mdp) VALUES (?,?,?)");
-                        $requete->execute(array($pseudo,$mail,$mdp1));
-                        header("location: http://localhost/DevWeb/Inscris.html");
-                    }
-                    else{
-                        echo "<script>alert('les mots de passes ne correspondent pas')</script>";
-                    }
-                }
-                else{
-                    echo "<script>alert('Merci de remplir toutes les cases')</script>";
-                }
-
+            if(isset($_POST['deco'])){
+                session_destroy();
+                header("location: http://localhost/DevWeb/menu.html");
             }
             ?>
     </body>

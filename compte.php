@@ -44,7 +44,7 @@
             <h1>Connexion</h1>
             <label class="label">Email :<br><input class="text" type="email" name="logmail" placeholder="******@***.**"></label>
             <br>
-            <label class="label">de passe :<br><input class="text" type="password" name="logmdp" ></label>
+            <label class="label">Mot de passe :<br><input class="text" type="password" name="logmdp" placeholder="*******"></label>
             <br>
             <input id="bouton" type="submit" value="Connexion" name="subconnexion" >
         </form>
@@ -61,10 +61,11 @@
                     $pseudo=htmlspecialchars($_POST['pseudo']);
                     $mdp1=sha1($_POST['mdp1']);
                     $mdp2=sha1($_POST['mdp2']);
+                    $ad="0";
                     if($mdp1==$mdp2){
-                        $requete=$base->prepare("INSERT INTO user (nom,mail,mdp) VALUES (?,?,?)");
-                        $requete->execute(array($pseudo,$mail,$mdp1));
-                        header("location: http://localhost/DevWeb/Inscris.html");
+                        $requete=$base->prepare("INSERT INTO user (nom,mail,mdp,ad) VALUES (?,?,?,?)");
+                        $requete->execute(array($pseudo,$mail,$mdp1,$ad));
+                        header("location: http://localhost/DevWeb/Client/Inscris.html");
                     }
                     else{
                         echo "<script>alert('les mots de passes ne correspondent pas')</script>";
@@ -83,7 +84,12 @@
                     if($user->rowCount()==1){
                         $donne=$user->fetch();
                         if($logmdp == $donne['mdp']){
-                            header("location: http://localhost/DevWeb/Client/menu.html");
+                            if($donne['ad']==0){
+                                header("location: http://localhost/DevWeb/Client/menu.html");
+                            }
+                            else if($donne['ad']==1){
+                                header("location: http://localhost/DevWeb/Admin/menu.html");
+                            }
                         }
                         else{
                             echo "<script>alert('Erreur mot de passe')</script>";
