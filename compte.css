@@ -63,6 +63,21 @@ td, tr {
   background-color: #8bac0f;
 }
 
+#deco{
+    display: inline-block;
+    font-size: 1vw;
+    font-family: retro;
+    background-color: #9bbc0f;
+    color: #0f380f;
+    position:absolute;
+     top:1vw;
+     right:1vw;
+  }
+  
+#deco:hover {
+    background-color: #306230;
+}
+
 #idinsc {
   float: left;
   padding-left: 0.5vw;
@@ -118,7 +133,7 @@ td, tr {
   color: #0f380f;
 }
 
-#bouton {
+#button {
   font-size: 1vw;
   margin: 0.5vw;
   font-family: retro;
@@ -126,6 +141,22 @@ td, tr {
   color: #0f380f;
 }
 
-#bouton:hover {
+#button:hover {
   background-color: #306230;
+}
+#l_pokedex td, tr {
+  font-size: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-family: retro;
+  border: solid 2px black;
+  border-radius: 8px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
+  background-color: #9bbc0f;
+  color: #0f380f;
 }

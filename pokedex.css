@@ -124,3 +124,17 @@ img {
   font-size: 1vw;
   margin: 0.5vw;
 }
+#deco{
+  display: inline-block;
+  font-size: 1vw;
+  font-family: retro;
+  background-color: #9bbc0f;
+  color: #0f380f;
+  position:absolute;
+   top:1vw;
+   right:1vw;
+}
+
+#deco:hover {
+  background-color: #306230;
+}
