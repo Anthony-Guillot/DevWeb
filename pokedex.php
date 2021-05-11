@@ -55,13 +55,13 @@
         $pokemon=$base->query('select * from pokemon where nom like "%'.$search.'%"');
         if($pokemon->rowCount() > 0){
           while($donne=$pokemon->fetch()){
-            echo '<tr><td  id="image"><img id="imimage" src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
+            echo '<tr><td  id="image"><img id="imimage" src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td><a id="nom" href="compte.php?nom='.$donne['nom'].'">'.$donne['nom'].'</a></td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
           }
         }
       }
       else{
         while($donne=$requete->fetch()){
-          echo '<tr><td  id="image"><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td>'.$donne['nom'].'</td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
+          echo '<tr><td  id="image"><img src=image/'.$donne['id'].'.png></td><td>'.$donne['id'].'</td><td><a id="nom" href="pokemon.php?nom='.$donne['nom'].'">'.$donne['nom'].'</a></td><td>'.$donne['base_pv'].'</td><td>'.$donne['base_atk'].'</td><td>'.$donne['base_def'].'</td><td>'.$donne['base_atk_spe'].'</td><td>'.$donne['base_def_spe'].'</td><td>'.$donne['base_spd'].'</td></tr>';
         }
       }
     echo '</table>';
@@ -70,7 +70,7 @@
             session_start();
             if(isset($_POST['deco'])){
                 session_destroy();
-                header("location: http://localhost/DevWeb (copie)/menu.php");
+                header("location: http://localhost/DevWeb/menu.php");
             }
             ?>
   </body>

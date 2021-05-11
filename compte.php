@@ -48,7 +48,7 @@
                 session_start();
                 if(isset($_POST['deco'])){
                     session_destroy();
-                    header("location: http://localhost/DevWeb (copie)/menu.php");
+                    header("location: http://localhost/DevWeb/menu.php");
                 }
         $requete=$base->query('select nom,mail,ad from user');
         echo '<table id="l_pokedex">';
@@ -74,7 +74,7 @@
         session_start();
             if(isset($_POST['deco'])){
                 session_destroy();
-                header("location: http://localhost/DevWeb (copie)/menu.php");
+                header("location: http://localhost/DevWeb/menu.php");
             }
             session_start();
             }
@@ -134,12 +134,12 @@
                                 if($donne['ad']==0){
                                     $_SESSION['role']="client";
                                     $_SESSION['mail']=$logmail;
-                                    header("location: http://localhost/DevWeb (copie)/menu.php");
+                                    header("location: http://localhost/DevWeb/menu.php");
                                 }
                                 else if($donne['ad']==1){
                                     $_SESSION['role']="admin";
                                     $_SESSION['mail']=$logmail;
-                                    header("location: http://localhost/DevWeb (copie)/menu.php");
+                                    header("location: http://localhost/DevWeb/menu.php");
                                 }
                             }
                             else{

@@ -22,6 +22,13 @@ a {
 a:hover {
   color: #0f380f;
 }
+#nom{
+  font-family: retro;
+  color: #0f380f;
+}
+#nom:hover{
+  color: #306230;
+}
 
 body {
   font-family: retro;
@@ -59,6 +66,23 @@ td, tr {
   text-align: center;
   border: solid 1px;
   background-color: #8bac0f;
+}
+
+#l_pokemon td,tr{
+  font-size: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-family: retro;
+  text-align:center;
+  border: solid 2px black;
+  border-radius: 8px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2em;
+  background-color: #9bbc0f;
+  color: #0f380f;
 }
 
 #l_pokedex td, tr {

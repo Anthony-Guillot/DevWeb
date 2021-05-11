@@ -89,7 +89,7 @@
             session_start();
             if(isset($_POST['deco'])){
                 session_destroy();
-                header("location: http://localhost/DevWeb (copie)/menu.php");
+                header("location: http://localhost/DevWeb/menu.php");
             }
             ?>
         </div>
