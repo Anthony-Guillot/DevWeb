@@ -1,4 +1,3 @@
 # DevWeb
-projet dev web L2
-
-Ici c'est le répertoire de notre projet dev web.
+## Projet web de L2
+Simple projet de Develepoment web pour apprendre le php
